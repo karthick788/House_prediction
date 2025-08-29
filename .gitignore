@@ -1,0 +1,112 @@
+# Ignore everything by default
+*
+
+# Allow these
+!.gitignore
+!README.md
+!requirements.txt
+!package.json
+!package-lock.json
+!tsconfig.json
+!tsconfig.*.json
+
+# Keep source code
+!api/**
+!app/**
+!model/**
+!training/**
+!tests/**
+
+# -----------------
+# Node / Next.js
+# -----------------
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# next.js in app/ subfolder
+app/node_modules/
+app/.next/
+app/out/
+app/build/
+app/.vercel/
+app/.turbo/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# -----------------
+# Python / ML
+# -----------------
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data
+dataset/
+data/
+*.csv
+*.xlsx
+
+# Models
+*.joblib
+*.pkl
+*.h5
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Optional: ignore notebooks if they are large and not needed in git
+notebooks/
+*.ipynb
+
+# Python caches and test artifacts
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+
+# OS files
+Thumbs.db
+
+# Logs
+*.log
