@@ -1,108 +1,92 @@
-# Ignore everything by default
-*
-
-# Allow these
-!.gitignore
-!README.md
-!requirements.txt
-!package.json
-!package-lock.json
-!tsconfig.json
-!tsconfig.*.json
-
-# Keep source code
-!api/**
-!app/**
-!model/**
-!models/**       # ✅ now models folder is included
-!training/**
-!tests/**
-
-# -----------------
-# Node / Next.js
-# -----------------
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# next.js in app/ subfolder
-app/node_modules/
-app/.next/
-app/out/
-app/build/
-app/.vercel/
-app/.turbo/
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# -----------------
-# Python / ML
-# -----------------
-# Virtual environments
-.venv/
-env/
-venv/
-
-# Byte-compiled / cache
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Data
-dataset/
-data/
+# Virtual Environment
+venv/
+ENV/
+env/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Next.js
+.next/
+out/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files
+build/
+dist/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific (KEEP THESE TO TRACK MODELS)
+!models/**
+
+# Ignore large data files but track models
 *.csv
 *.xlsx
+*.ipynb
+!**/*.pkl
+!**/*.joblib
+!**/*.h5
+!**/*.pt
+!**/*.pth
+!**/*.model
 
 # Jupyter
 .ipynb_checkpoints/
-
-# Optional: ignore notebooks if they are large and not needed in git
-notebooks/
-*.ipynb
+!notebooks/**
 
 # Python caches and test artifacts
 .pytest_cache/
 .mypy_cache/
 .coverage
 coverage.xml
-
-# OS files
-Thumbs.db
-
-# Logs
-*.log
