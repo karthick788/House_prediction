@@ -17,29 +17,25 @@ app = FastAPI(
     description="API for predicting house prices using machine learning",
     version="1.0.0"
 )
+# In api/main.py, replace the existing CORS middleware with this:
 
-# Add CORS middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend URL
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-# Allow CORS for frontend
-# Allow CORS for local frontend
+# Remove the existing CORS middleware and add this single, updated version
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        # Local development
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        # Add your Vercel deployment URL here
-        "https://your-vercel-app-name.vercel.app",
-        # For custom domains
-        "https://your-custom-domain.com",
+        
+        # Production URLs
+        "https://house-prediction-v2kd.onrender.com",
+        "https://house-prediction-v2kd.vercel.app",
+        "https://house-prediction-git-main-karthick788.vercel.app",
+        "https://house-prediction-karthick788.vercel.app",
+        
+        # Add any other domains that need access
     ],
     allow_credentials=True,
     allow_methods=["*"],
