@@ -14,6 +14,7 @@
 !api/**
 !app/**
 !model/**
+!models/**       # ✅ now models folder is included
 !training/**
 !tests/**
 
@@ -86,11 +87,6 @@ dataset/
 data/
 *.csv
 *.xlsx
-
-# Models
-*.joblib
-*.pkl
-*.h5
 
 # Jupyter
 .ipynb_checkpoints/
