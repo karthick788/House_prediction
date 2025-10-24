@@ -50,7 +50,7 @@ export const PredictionResult: React.FC<PredictionResultProps> = ({
               </div>
             </div>
             <div className="mt-3 text-xs text-gray-500">
-              There's a 90% chance the actual price falls within this range.
+              There&apos;s a 90% chance the actual price falls within this range.
             </div>
           </div>
         ) : (

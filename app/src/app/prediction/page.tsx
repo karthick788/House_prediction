@@ -5,7 +5,6 @@ import { PredictionForm } from './components/PredictionForm';
 import { PredictionResult } from './components/PredictionResult';
 import { PredictionResponse, PredictionFormData } from './types';
 
-import { ApiService } from '../services/api';
 
 
 const predictHousePrice = async (formData: PredictionFormData): Promise<PredictionResponse> => {

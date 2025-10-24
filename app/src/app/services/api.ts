@@ -1,7 +1,7 @@
 import { PredictionFormData, PredictionResponse } from '../prediction/types';
 
 // Environment-based API URL
-const API_URL = 'http://localhost:8000'; // Directly set the backend URL
+const API_URL = "https://house-prediction-v2kd.onrender.com";
 
 export const ApiService = {
   /**
