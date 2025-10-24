@@ -28,6 +28,7 @@ app.add_middleware(
 )
 
 # Allow CORS for frontend
+# Allow CORS for local frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
