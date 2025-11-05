@@ -1,0 +1,6 @@
+# .gitignore (add to repo root or app/)
+.next
+node_modules
+/dist
+.env.local
+.env.*.local
