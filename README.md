@@ -2,7 +2,7 @@
 
 A production-ready machine learning system for predicting house prices with a modern web interface. Built with FastAPI backend and Next.js frontend, deployed on Render and Vercel.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://house-prediction-karthick788.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://house-prediction-g35r.vercel.app/)
 [![API](https://img.shields.io/badge/API-FastAPI-009688)](https://house-prediction-v2kd.onrender.com)
 
 ## ✨ Features
