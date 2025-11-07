@@ -8,6 +8,8 @@ import {
   CITIES,
   PROPERTY_TYPES,
   FURNISHING_OPTIONS,
+  CITY_LOCALITIES,
+  City,
 } from "../types";
 
 interface PredictionFormProps {
@@ -37,6 +39,17 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+    
+    // If city is changed, reset locality
+    if (name === "city") {
+      setFormData((prev) => ({
+        ...prev,
+        city: value as City,
+        locality: "", // Reset locality when city changes
+      }));
+      return;
+    }
+    
     setFormData((prev) => ({
       ...prev,
       [name]:
@@ -51,6 +64,9 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({
           : value,
     }));
   };
+
+  // Get localities for the selected city
+  const availableLocalities = CITY_LOCALITIES[formData.city] || [];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -107,13 +123,16 @@ export const PredictionForm: React.FC<PredictionFormProps> = ({
           required
         />
 
-        <FormInput
+        <SelectInput
           label="Locality"
           name="locality"
-          type="text"
           value={formData.locality}
           onChange={handleChange}
-          placeholder="Enter locality / neighborhood"
+          options={availableLocalities.map((locality) => ({
+            value: locality,
+            label: locality,
+          }))}
+          placeholder={`Select locality in ${formData.city}`}
           required
         />
 
