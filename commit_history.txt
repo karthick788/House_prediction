@@ -3,3 +3,4 @@ Commit 21: Add tests - 2025-12-18 09:06:09
 Commit 22: Refactor code - 2025-12-18 09:06:09
 Commit 23: Fix typo - 2025-12-18 09:06:09
 Commit 24: Update config - 2025-12-18 09:06:09
+Commit 25: Clean up code - 2025-12-18 09:06:09
